@@ -26,6 +26,8 @@
     "express": "^4.16.4",
     "jquery": "^3.3.1",
     "popper.js": "^1.15.0",
-    "requirejs": "^2.3.6"
+    "requirejs": "^2.3.6",
+    "web-component-signin": "git+https://github.com/rvijayarajan/web-component-signin.git#1.0.1",
+    "web-component-signup": "git+https://github.com/rvijayarajan/web-component-signup.git#1.0.1"
   }
 }
