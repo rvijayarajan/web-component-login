@@ -19,7 +19,7 @@ angular.module('wcLoginTemplates', []).run(['$templateCache', function($template
 
 (function () {
 
- 	var app = angular.module("wcLogin",["ngAnimate","wcSignin","wcSignup"]);
+ 	var app = angular.module("wcLogin",["wcLoginTemplates","ngAnimate","wcSignin","wcSignup"]);
 
 	app.component("login", {
 		templateUrl: "login.html",
