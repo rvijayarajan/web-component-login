@@ -1,6 +1,6 @@
 (function () {
 
- 	var app = angular.module("wcLogin",["wcSignin","wcSignup"]);
+ 	var app = angular.module("wcLogin",["ngAnimate","wcSignin","wcSignup"]);
 
 	app.component("login", {
 		templateUrl: "login.html",
@@ -35,6 +35,51 @@
 				password: password
 			});
 		};
+
+		vm.toggleAction = function() {
+			vm.login = !vm.login;
+		};
+
+		vm.$onInit = function() {
+			vm.login = true;
+		};
+	}
+
+	app.animation('.loginButton', toggleActionAnimation);
+
+	function toggleActionAnimation() {
+		return {
+			addClass: signin,
+			removeClass: signup
+		};
+
+		function signin(element, classname, done) {
+			element.css({
+				
+			}).animate({
+
+			},done);
+
+			return function signinEnd(cancel) {
+				if(cancel) {
+					element.stop();
+				}
+			}
+		}
+
+		function signup(element, classname, done) {
+			element.css({
+
+			}).animate({
+
+			},done);
+
+			return function signupEnd(cancel) {
+				if(cancel) {
+					element.stop();
+				}
+			}
+		}
 	}
 
 })();

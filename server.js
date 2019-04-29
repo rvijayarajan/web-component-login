@@ -14,6 +14,10 @@ app.get('/scripts/angular.min.js', function(req, res){
   res.sendFile(path.join(__dirname + '/node_modules/angular/angular.min.js'));
 });
 
+app.get('/scripts/angular-animate.min.js', function(req, res){
+  res.sendFile(path.join(__dirname + '/node_modules/angular-animate/angular-animate.min.js'));
+});
+
 app.get('/scripts/angular-cookies.min.js', function(req, res){
   res.sendFile(path.join(__dirname + '/node_modules/angular-cookies/angular-cookies.min.js'));
 });
@@ -64,6 +68,10 @@ app.get('/css/bootstrap.css', function(req,res){
 
 app.get('/css/ionicons.css', function(req,res){
   res.sendFile(path.join(__dirname + '/node_modules/ionicons/dist/css/ionicons.css'))
+});
+
+app.get('/css/wcLoginStyles.css', function(req,res){
+  res.sendFile(path.join(__dirname + '/wcLoginStyles.css'))
 });
 
 app.get('/fonts/ionicons.eot', function(req,res){

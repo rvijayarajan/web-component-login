@@ -1,2 +1,6 @@
-<signin cookie-config="config" on-submit="$ctrl.signin(username,password)"></signin>
-<signup on-submit="$ctrl.signup(name,email,password,agreed)"></signup>
+<label class="switch">
+	<input type="checkbox">
+	<span class="slider round" ng-click="$ctrl.toggleAction()"><b class="toggleText">{{$ctrl.login ? 'SignIn' : 'SignUp'}}</b></span>
+</label>
+<signin cookie-config="config" on-submit="$ctrl.signin(username,password)" ng-if="$ctrl.login"></signin>
+<signup on-submit="$ctrl.signup(name,email,password,agreed)" ng-if="!$ctrl.login"></signup>
